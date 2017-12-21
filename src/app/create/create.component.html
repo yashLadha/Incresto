@@ -1,0 +1,53 @@
+<div class="container">
+  <form (ngSubmit)="submitPost()">
+    <div class="form-group row">
+      <label for="inputTitle" class="col-sm-2 col-form-label">Title</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="title" name="title" id="inputTitle" placeholder="Title">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputAuthor" class="col-sm-2 col-form-label">Author</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputAuthor" [(ngModel)]="author" name="author" placeholder="Author">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputContent" class="col-sm-2 col-form-label">Content</label>
+      <div class="col-sm-10">
+        <textarea type="text" class="form-control" id="inputContent" [(ngModel)]="content" name="content" placeholder="Content"></textarea>
+      </div>
+    </div>
+    <div class="form-group row" *ngIf="content">
+      <label for="preview" class="col-sm-2 col-form-label">Preview</label>
+      <div class="col-sm-10">
+        <markdown [data]="content">
+        </markdown>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="preview" class="col-sm-2 col-form-label">Thumbnail</label>
+      <div class="col-sm-10">
+        <input type="file" class="form-control" id="thumbnail" placeholder="Browse" #thumbnail>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2">Save as Draft</label>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" [(ngModel)]="draft" name="draft" type="checkbox"> Draft
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Post</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script type="text">
+
+</script>
