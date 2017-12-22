@@ -1,0 +1,19 @@
+img {
+    position: absolute;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.bottom-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 0%;
+    right: 0%;
+    text-align: center;
+}
+
+.send-back {
+    z-index: -5;
+}
