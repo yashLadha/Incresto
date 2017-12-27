@@ -2,7 +2,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .top-padding {
-    padding: 5rem;
+  padding: 5rem;
 }
 
 .starter-template {
@@ -10,3 +10,6 @@
     text-align: center;
 }
 
+.send-back {
+    z-index: -5;
+}

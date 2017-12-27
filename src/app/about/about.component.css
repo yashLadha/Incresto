@@ -1,0 +1,31 @@
+.opacity-change {
+  opacity: 1;
+}
+
+.opacity-change:hover {
+  opacity: 0.6;
+}
+
+#skill-card-primary .list {
+  display: none;
+}
+
+#skill-card-primary:hover .list {
+  display: block;
+}
+
+#skill-card-info .list {
+  display: none;
+}
+
+#skill-card-info:hover .list {
+  display: block;
+}
+
+#skill-card-success .list {
+  display: none;
+}
+
+#skill-card-success:hover .list {
+  display: block;
+}

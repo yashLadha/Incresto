@@ -8,11 +8,11 @@ import { CreateComponent } from '../create/create.component';
 import { PostDetailComponent } from '../post-detail/post-detail.component';
 
 export const routes: Routes = [
-    { path: 'blog', component: BlogComponent, pathMatch: 'full' },
-    { path: 'home', component: HomeComponent, pathMatch: 'full' },
+    { path: 'blog', component: BlogComponent },
+    { path: 'home', component: HomeComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'about', component: AboutComponent, pathMatch: 'full' },
-    { path: 'login', component: LoginComponent, pathMatch: 'full' },
-    { path: 'create', component: CreateComponent, pathMatch: 'full' },
-    { path: 'blog/:id', component: PostDetailComponent, pathMatch: 'full' }
+    { path: 'about', component: AboutComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'create', component: CreateComponent },
+    { path: 'blog/:id', component: PostDetailComponent }
 ]

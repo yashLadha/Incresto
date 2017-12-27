@@ -1,3 +1,19 @@
-<p>
-  about works!
-</p>
+<div class="container top-padding">
+  <div class="row">
+    <div class="col-sm" *ngFor="let skill of skills">
+      <div id="skill-card-{{ skill.color }}" class="card bg-{{ skill.color }} opacity-change" style="height: 12rem; padding: 10px;">
+        <div class="card-block" style="text-align: center;">
+          <h4>{{ skill.domain }}</h4>
+        </div>
+        <div class="list">
+          <ul *ngFor="let item of skill.list">
+            <li>
+              {{ item.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br/>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SKILL_LIST } from '../shared/SkList';
+import { SkillDetail } from '../shared/skillList';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  skills: SkillDetail[];
+
+  constructor() {
+    this.skills = SKILL_LIST;
+  }
 
   ngOnInit() {
   }
