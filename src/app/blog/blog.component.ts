@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
 import {AngularFireDatabase} from 'angularfire2/database';
 
 import {Post} from '../shared/post';
@@ -10,8 +9,6 @@ import {Post} from '../shared/post';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
-
-  items: Observable<any[]>;
   posts: Post[];
 
   constructor(private db: AngularFireDatabase) {
@@ -25,7 +22,7 @@ export class BlogComponent implements OnInit {
       for (const item in data) {
         const objectRef = new Post().deserialize(data[item]);
         objectRef.setId(item);
-        const elem = this.posts.push(objectRef);
+        this.posts.push(objectRef);
       }
     });
   }
