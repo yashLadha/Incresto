@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { AngularFireDatabase } from 'angularfire2/database';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import {AngularFireDatabase} from 'angularfire2/database';
 
-import { Post } from '../shared/post';
+import {Post} from '../shared/post';
 
 @Component({
   selector: 'app-blog',
@@ -13,16 +13,16 @@ export class BlogComponent implements OnInit {
 
   items: Observable<any[]>;
   posts: Post[];
-  
-  constructor(private db:AngularFireDatabase) { 
+
+  constructor(private db: AngularFireDatabase) {
     this.retrievePosts();
   }
-  
+
   retrievePosts() {
     const itemRef = this.db.object('posts').valueChanges();
     itemRef.subscribe(data => {
       this.posts = [];
-      for (let item in data) {
+      for (const item in data) {
         const objectRef = new Post().deserialize(data[item]);
         objectRef.setId(item);
         const elem = this.posts.push(objectRef);
@@ -32,5 +32,5 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
 }

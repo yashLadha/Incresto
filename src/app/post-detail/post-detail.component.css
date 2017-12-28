@@ -1,0 +1,32 @@
+.parallax {
+  height: 600px;
+  width: 100%;
+
+  /* Create the parallax scrolling effect */
+  background: no-repeat fixed center;
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .parallax {
+    height: 200px;
+    background-attachment: scroll;
+  }
+}
+
+.post-back {
+  background-image: linear-gradient(to right, #6b6c6f, #242828);
+  background-size: 100%;
+}
+
+.content-height {
+  background: #d6d6d6;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+  .post-back {
+    height: 50%;
+  }
+}

@@ -1,5 +1,13 @@
-<div class="container top-padding">
-  <div Markdown *ngIf="content">
-    {{ content }}
+<div class="post-back">
+  <div class="container extra-top-padding content-height" *ngIf="content">
+    <div class="row">
+      <div [style.background-image]="bgImage" class="parallax">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+      <div Markdown>
+        {{ content.content }}
+      </div>
+    </div>
   </div>
 </div>

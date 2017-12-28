@@ -19,3 +19,7 @@ html, body {
 .send-back {
     z-index: -5;
 }
+
+.extra-top-padding {
+  padding: 6rem;
+}
