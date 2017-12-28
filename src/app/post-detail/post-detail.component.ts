@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
-import { AngularFireDatabase } from 'angularfire2/database';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {AngularFireDatabase} from 'angularfire2/database';
 
 
 @Component({
@@ -12,9 +11,9 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class PostDetailComponent implements OnInit {
 
   content: string;
-  key: any
+  key: any;
 
-  constructor(private route: ActivatedRoute, private db:AngularFireDatabase) {
+  constructor(private route: ActivatedRoute, private db: AngularFireDatabase) {
     route.params.subscribe(params => {
       this.key = params['id'];
       this.fetchPost();
@@ -23,7 +22,7 @@ export class PostDetailComponent implements OnInit {
 
   fetchPost() {
     const postRef = this.db.object('posts/' + this.key);
-    postRef.valueChanges().subscribe(data => this.content = data['content'])
+    postRef.valueChanges().subscribe(data => this.content = data['content']);
   }
 
   ngOnInit() {
